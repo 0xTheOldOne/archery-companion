@@ -3,14 +3,17 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
+
   <router-view />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
-import { getSupportedLocales } from "./locales/helper";
-import { getBrowserLocale } from "./locales/helper";
+import { getSupportedLocales } from "@/locales/helper";
+import { getBrowserLocale } from "@/locales/helper";
+
+import Menu from "@/components/Menu.vue";
 
 export default defineComponent({
   name: "App",

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <HelloWorld msg="toto" />
+    This is a template component with a <code>msg</code> property and i18n :<br />
+    {{ msg }}<br />
+    {{ $t("message") }}
   </div>
 </template>
 
@@ -8,12 +10,11 @@
 import { defineComponent } from "vue";
 import { getSupportedLocales } from "@/locales/helper";
 import { getBrowserLocale } from "@/locales/helper";
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
+  name: "TemplateComponent",
+  props: {
+    msg: String,
   },
   data() {
     return {};
